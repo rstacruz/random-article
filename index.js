@@ -24,12 +24,13 @@ function randomArticle () {
       const html = formatContent($('.entry-content').html())
       const title = formatTitle($('title').html())
       const content = markdownify(html)
-      return { id, content, title }
+      return { id, title, content }
     })
 }
 
 /**
  * Cleans up HTML.
+ * @private
  */
 
 function formatContent (text) {
@@ -43,6 +44,7 @@ function formatContent (text) {
 
 /**
  * Cleans up the `<title>` tag.
+ * @private
  */
 
 function formatTitle (text) {
@@ -62,6 +64,7 @@ function markdownify (html) {
 
 /**
  * Returns a random article number.
+ * @private
  */
 
 function randomId () {
@@ -71,6 +74,7 @@ function randomId () {
 /**
  * Checks the status of a fetch() call and returns an error for non-2xx and
  * non-3xx responses.
+ * @private
  */
 
 function checkStatus (res) {
@@ -82,3 +86,9 @@ function checkStatus (res) {
     throw err
   }
 }
+
+/*
+ * Export
+ */
+
+module.exports = randomArticle
