@@ -1,0 +1,16 @@
+{
+  "name": "random-article",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "isomorphic-fetch": "2.2.1"
+  }
+}
