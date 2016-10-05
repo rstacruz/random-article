@@ -11,7 +11,7 @@ random-article fetches a random PLR (private label rights) article in Markdown f
 Requires Node.js v4 and above.
 
 ```sh
-npm install -g rstacruz/random-article
+npm install -g @rstacruz/random-article
 random-article
 ```
 

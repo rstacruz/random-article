@@ -1,5 +1,5 @@
 {
-  "name": "random-article",
+  "name": "@rstacruz/random-article",
   "description": "Fetches a random article for use as filler text",
   "version": "1.0.0",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
