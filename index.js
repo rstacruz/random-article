@@ -82,16 +82,3 @@ function checkStatus (res) {
     throw err
   }
 }
-
-if (!module.parent) {
-  randomArticle()
-    .then(d => {
-      console.log('# ' + d.title)
-      console.log('')
-      console.log(d.content)
-    })
-    .catch(e => {
-      console.error(e)
-      process.exit(1)
-    })
-}

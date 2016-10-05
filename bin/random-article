@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const randomArticle = require('../index')
+
+randomArticle()
+  .then(d => {
+    console.log('# ' + d.title)
+    console.log('')
+    console.log(d.content)
+  })
+  .catch(e => {
+    console.error(e)
+    process.exit(1)
+  })
