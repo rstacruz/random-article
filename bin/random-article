@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 const randomArticle = require('../index')
 
+const cli = require('meow')(`
+  Usage:
+    $ random-article
+
+  Options:
+    -h, --help       show usage information
+    -v, --version    print version info and exit
+`, {
+  boolean: ['help', 'version'],
+  alias: {
+    h: 'help', v: 'version'
+  }
+})
+
 randomArticle()
   .then(d => {
     console.log('# ' + d.title)

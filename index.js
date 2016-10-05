@@ -37,7 +37,7 @@ function formatContent (text) {
   return text
     .replace(/[\s\r\n\t]+/g, ' ')
     .trim()
-    .replace(/\s*<br><br>\s*/g, '</p><p>')
+    .replace(/\s*(<br>){2,}\s*/g, '</p><p>')
     .replace(/\s*<p>Word count: [^<]*<\/p>\s*/g, '')
     .replace(/\s*<br class="clear-content">\s*/g, '')
 }
@@ -53,6 +53,11 @@ function formatTitle (text) {
     .trim()
 }
 
+/**
+ * Converts HTML into Markdown in a very naive way.
+ * @private
+ */
+
 function markdownify (html) {
   const $ = cheerio.load(`<div>${html}</div>`)
   let blocks = []
@@ -60,6 +65,7 @@ function markdownify (html) {
     blocks.push($(this).text())
   })
   return blocks.join('\n\n')
+    .replace(/[\r\n]{2,}/g, '\n\n')
 }
 
 /**
