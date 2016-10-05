@@ -83,13 +83,15 @@ function checkStatus (res) {
   }
 }
 
-randomArticle()
-  .then(d => {
-    console.log('# ' + d.title)
-    console.log('')
-    console.log(d.content)
-  })
-  .catch(e => {
-    console.error(e)
-    process.exit(1)
-  })
+if (!module.parent) {
+  randomArticle()
+    .then(d => {
+      console.log('# ' + d.title)
+      console.log('')
+      console.log(d.content)
+    })
+    .catch(e => {
+      console.error(e)
+      process.exit(1)
+    })
+}
