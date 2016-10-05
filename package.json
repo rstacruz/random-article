@@ -1,19 +1,36 @@
 {
   "name": "random-article",
+  "description": "Fetches a random article for use as filler text",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
   "bin": {
     "random-article": "./bin/random-article"
   },
-  "keywords": [],
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstacruz/random-article/issues"
+  },
   "dependencies": {
     "cheerio": "0.22.0",
     "isomorphic-fetch": "2.2.1"
+  },
+  "devDependencies": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "homepage": "https://github.com/rstacruz/random-article#readme",
+  "keywords": [
+    "article",
+    "filler",
+    "lorem",
+    "plr"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/random-article.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
